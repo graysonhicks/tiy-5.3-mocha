@@ -13,7 +13,7 @@ $(function(){
   Post.fetch();
 
   $('.main-form').on('submit', function(event){
-    event.preventDefault();
+    
     var post = $(this).serializeArray();
     post = _.reduce(post, function(memo, value){
       memo[value.name] = value.value;
