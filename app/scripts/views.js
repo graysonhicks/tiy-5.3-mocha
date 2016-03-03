@@ -10,6 +10,7 @@ PostView.prototype.showPosts = function(posts){
   _.forEach(posts, function(post){
     $('.posts').append('<li><h1>' + post.title + '</h1><p>' + post.body + '</p></li>');
   });
+  console.log("aftereach", posts);
 };
 
 global.PostView = PostView;

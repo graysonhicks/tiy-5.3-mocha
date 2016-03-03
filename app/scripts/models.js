@@ -13,8 +13,9 @@ Post.fetch = function(){
 
 Post.submit = function(posts){
   return new $.post('http://tiny-lasagna-server.herokuapp.com/collections/posts', posts).then(function(posts){
-    $(document).trigger("create:post", [posts]);
+    $(document).trigger("create:post", posts);
     console.log("create");
+    console.log("submit", posts);
     return posts;
   });
 };
